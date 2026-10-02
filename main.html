@@ -2,95 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GENEZZ – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#fff;--bg2:#f6f5fc;--card:#fff;--tx:#14142b;--mut:#6b6b85;--bd:#e7e5f3;--ac:#5b3df5;--acs:#ece8ff;--term:#0e0b1f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b1a;--bg2:#141126;--card:#171430;--tx:#eceaff;--mut:#9b98b8;--bd:#2a2650;--ac:#8b73ff;--acs:#262050;--term:#070612}}
-    :root[data-theme="dark"]{--bg:#0d0b1a;--bg2:#141126;--card:#171430;--tx:#eceaff;--mut:#9b98b8;--bd:#2a2650;--ac:#8b73ff;--acs:#262050;--term:#070612}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
-    body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 Inter,system-ui,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
-    .tag{font:12px 'JetBrains Mono',monospace;color:var(--mut);margin:0 0 10px}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-    section{padding:72px 0}
-    section:nth-of-type(even){background:var(--bg2)}
-    h1,h2{line-height:1.2;margin:0 0 14px;font-weight:600}
-    h1{font-size:clamp(30px,5vw,44px)}h2{font-size:clamp(24px,3.5vw,30px)}
-    p{margin:0 0 16px;color:var(--mut);max-width:60ch}
-    .ac{color:var(--ac)}
-    /* nav */
-    nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
-    nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
-    .logo{font-weight:600;letter-spacing:.06em;margin-right:auto}
-    nav a.l{font-size:13px;color:var(--mut)}nav a.l:hover{color:var(--ac)}
-    @media(max-width:720px){nav a.l{display:none}}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-family:inherit}
-    .btn.p{background:var(--ac);border-color:var(--ac);color:#fff}
-    .btn:hover{filter:brightness(1.08)}
-    .btn:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-    .ib{width:34px;height:34px;padding:0;justify-content:center;border-radius:50%}
-    .cv{background:var(--tx);color:var(--bg);border-color:var(--tx);padding:7px 16px;font-size:12px}
-    /* hero */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-    @media(max-width:820px){.hero,.split,.cols{grid-template-columns:1fr!important}}
-    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-    .ph{border:1.5px dashed var(--bd);border-radius:16px;background:linear-gradient(135deg,var(--acs),transparent);display:grid;place-items:center;text-align:center;color:var(--mut);font:12px 'JetBrains Mono',monospace;padding:20px}
-    .hero .ph{min-height:340px}
-    /* split */
-    .split{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
-    .feat{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:10px;font-size:14px}
-    .feat li:before{content:"▸";color:var(--ac);margin-right:10px}
-    .card{background:var(--card);border:1px solid var(--bd);border-radius:14px}
-    .vid{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#3a2d5c,#1d1530 60%,#4a3a2a);}
-    .vid .hud{position:absolute;top:10px;left:10px;font:11px 'JetBrains Mono',monospace;color:#fff;background:#0008;padding:3px 8px;border-radius:5px}
-    .bx{position:absolute;border:2px solid;font:10px 'JetBrains Mono',monospace;color:#fff}
-    .bx span{position:absolute;top:-17px;left:-2px;padding:1px 5px}
-    .panel{display:grid;grid-template-columns:2fr 1fr;gap:14px}
-    @media(max-width:820px){.panel{grid-template-columns:1fr}}
-    .side{padding:14px;font-size:13px;display:grid;gap:10px;align-content:start}
-    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
-    .sw{appearance:none;width:34px;height:20px;border-radius:20px;background:var(--bd);position:relative;cursor:pointer;float:right}
-    .sw:checked{background:var(--ac)}.sw:before{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .15s}
-    .sw:checked:before{transform:translateX(14px)}
-    /* terminal */
-    .term{background:var(--term);color:#d8d4ff;border-radius:12px;padding:16px;font:12.5px/1.7 'JetBrains Mono',monospace;height:340px;overflow:auto;border:1px solid #3a2d8a}
-    .term pre{margin:0;white-space:pre-wrap;font:inherit}
-    .term .in{display:flex;gap:8px}.term .pr{color:#8bf0c0}
-    .term input{flex:1;background:none;border:0;color:inherit;font:inherit;outline:0}
-    .cmds{display:grid;gap:12px;font-size:13px;margin-top:20px}
-    .cmds button{all:unset;cursor:pointer;display:flex;gap:16px;color:var(--mut)}
-    .cmds b{color:var(--ac);font:500 12px 'JetBrains Mono',monospace;min-width:70px}
-    .cmds button:hover b{text-decoration:underline}
-    /* assistant */
-    .cam{aspect-ratio:16/10;border-radius:14px;background:linear-gradient(135deg,#2a1a55,#0e0b1f);position:relative;display:grid;place-items:center;color:#cfc8ff;font:12px 'JetBrains Mono',monospace;text-align:center;padding:20px;overflow:hidden}
-    .cam svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
-    /* projets */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:24px}
-    .pc{overflow:hidden;display:flex;flex-direction:column}
-    .pc .th{height:140px;background:linear-gradient(135deg,var(--acs),var(--bg2));display:grid;place-items:center;font:11px 'JetBrains Mono',monospace;color:var(--mut)}
-    .pc .bd{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
-    .pc h3{margin:0;font-size:16px}.pc p{font-size:13px;margin:0}
-    .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
-    .chips span{font:11px 'JetBrains Mono',monospace;background:var(--acs);color:var(--ac);padding:2px 9px;border-radius:20px}
-    /* compétences */
-    .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:20px}
-    .sk{display:grid;gap:16px}
-    .sk div{font-size:13px}.sk div>span{float:right;color:var(--mut)}
-    .bar{height:5px;border-radius:5px;background:var(--bd);margin-top:6px;overflow:hidden}
-    .bar i{display:block;height:100%;background:var(--ac)}
-    svg text{fill:var(--mut);font:11px Inter,sans-serif}
-    /* contact */
-    .ct{display:grid;gap:12px;max-width:380px;margin:20px 0}
-    .ct a{padding:12px 16px;display:flex;flex-direction:column;font-size:13px}
-    .ct small{color:var(--mut)}
-    footer{padding:28px 0;text-align:center;font-size:12px;color:var(--mut)}
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accueil.css">
 </head>
 <body>
+
 <nav><div class="wrap">
   <a class="logo" href="#accueil">GENEZZ</a>
   <a class="l" href="#accueil">Accueil</a><a class="l" href="#projets">Projets</a><a class="l" href="#competences">Compétences</a><a class="l" href="#contact">Contact</a>
@@ -109,141 +28,10 @@
   <div class="ph">[ ton illustration / avatar ici ]<br>images/avatar.png</div>
 </div></section>
 
-<section id="vision"><div class="wrap">
-  <div class="split">
-    <div>
-      <p class="tag">// projet 01</p>
-      <h2>Vision par ordinateur</h2>
-      <p>Détection d’objets et suivi de trajectoires en temps réel avec YOLO et ByteTrack, sur une vidéo de sport.</p>
-      <ul class="feat"><li>Détection d’objets (YOLO)</li><li>Tracking (ByteTrack)</li><li>Affichage des trajectoires</li><li>Score de confiance</li></ul>
-      <a class="btn p" href="https://github.com/genesyx" target="_blank" rel="noopener">Voir le code</a>
-    </div>
-    <div class="panel">
-      <!-- Remplace .vid par <img> ou <video src="videos/demo-yolo.mp4"> -->
-      <div class="vid">
-        <div class="hud">FPS: 28 &nbsp; YOLO + ByteTrack</div>
-        <div class="bx" style="left:14%;top:48%;width:12%;height:36%;border-color:#a78bfa"><span style="background:#a78bfa">person 0.92</span></div>
-        <div class="bx" style="left:40%;top:56%;width:10%;height:30%;border-color:#38bdf8"><span style="background:#38bdf8">person 0.87</span></div>
-        <div class="bx" style="left:76%;top:42%;width:11%;height:40%;border-color:#fb923c"><span style="background:#fb923c">person 0.89</span></div>
-        <div class="bx" style="left:55%;top:16%;width:5%;height:8%;border-color:#34d399"><span style="background:#34d399">ball 0.96</span></div>
-        <svg id="traj" viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><path d="M30 60 Q42 20 57 20 T75 40" fill="none" stroke="#34d399" stroke-width=".8" stroke-dasharray="2 1.5"/></svg>
-      </div>
-      <div class="card side">
-        <b>Classes détectées</b>
-        <div><i class="dot" style="background:#7c5cff"></i>person <span style="float:right">4</span></div>
-        <div><i class="dot" style="background:#34d399"></i>ball <span style="float:right">1</span></div>
-        <div>Trajectoires <input type="checkbox" class="sw" id="sw" checked aria-label="Afficher les trajectoires"></div>
-      </div>
-    </div>
   </div>
-</div></section>
+</section>
 
-<section id="terminal"><div class="wrap split" style="grid-template-columns:.8fr 1.2fr">
-  <div>
-    <p class="tag">// interactif</p>
-    <h2>Terminal &amp; GitHub</h2>
-    <p>Explorez mon profil, mes compétences et mes dépôts via un terminal interactif. Tapez une commande pour découvrir mon univers.</p>
-    <div class="cmds">
-      <button data-c="help"><b>help</b>Liste des commandes</button>
-      <button data-c="skills"><b>skills</b>Mes compétences</button>
-      <button data-c="projects"><b>projects</b>Voir mes projets</button>
-      <button data-c="github"><b>github</b>Mon profil GitHub</button>
-      <button data-c="clear"><b>clear</b>Effacer le terminal</button>
-    </div>
-  </div>
-  <div class="term" id="term" onclick="cmd.focus()" role="region" aria-label="Terminal interactif">
-    <pre id="out">genezz@portfolio:~$ help
-Commandes disponibles :
-  help     – Affiche cette aide
-  skills   – Mes compétences
-  projects – Voir mes projets
-  github   – Mon profil GitHub
-  clear    – Effacer le terminal
-</pre>
-    <div class="in"><span class="pr">genezz@portfolio:~$</span><input id="cmd" autocomplete="off" spellcheck="false" aria-label="Commande"></div>
-  </div>
-</div></section>
 
-<section id="assistant"><div class="wrap split" style="grid-template-columns:.8fr 1.2fr">
-  <div>
-    <p class="tag">// ia en direct</p>
-    <h2>Assistant IA</h2>
-    <p>Un petit aperçu de ce que je fais : un modèle de détection de main en temps réel, exécuté directement dans le navigateur avec MediaPipe et TensorFlow.js.</p>
-    <button class="btn p" id="camBtn">Activer la webcam</button>
-    <p class="mono" id="camStatus" style="font-size:12px;margin-top:16px">● Modèle non chargé</p>
-  </div>
-  <div class="cam" id="cam">
-    <svg viewBox="0 0 100 60"><g stroke="#8b73ff" stroke-width=".5" fill="#8b73ff"><path d="M50 52 L38 38 L34 24 M50 52 L46 30 L46 14 M50 52 L54 30 L56 12 M50 52 L62 34 L68 22 M50 52 L72 44 L80 38" fill="none"/><circle cx="34" cy="24" r="1.2"/><circle cx="46" cy="14" r="1.2"/><circle cx="56" cy="12" r="1.2"/><circle cx="68" cy="22" r="1.2"/><circle cx="80" cy="38" r="1.2"/></g></svg>
-    <span style="position:relative">// ici : flux webcam + MediaPipe Hands<br>(à brancher à l’étape suivante)</span>
-  </div>
-</div></section>
 
-<section id="projets"><div class="wrap">
-  <p class="tag">// mes projets</p>
-  <h2>Quelques projets</h2>
-  <div class="grid">
-    <!-- Remplace .th par <img src="images/projet-yolo.jpg" alt=""> -->
-    <article class="card pc"><div class="th">images/projet-yolo.jpg</div><div class="bd"><h3>Suivi de joueurs (YOLO)</h3><p>Détection et tracking sur un terrain de sport. YOLO + ByteTrack.</p><div class="chips"><span>Python</span><span>OpenCV</span><span>YOLO</span></div></div></article>
-    <article class="card pc"><div class="th">images/projet-dl.jpg</div><div class="bd"><h3>Deep Learning – TensorFlow</h3><p>Entraînement d’un modèle de classification sur un dataset personnalisé.</p><div class="chips"><span>Python</span><span>TensorFlow</span><span>Keras</span></div></div></article>
-    <article class="card pc"><div class="th">images/projet-web.jpg</div><div class="bd"><h3>Site web – Team Vitality</h3><p>Site statique HTML/CSS. Responsive, moderne et dynamique.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
-  </div>
-</div></section>
-
-<section id="competences"><div class="wrap">
-  <p class="tag">// compétences</p>
-  <h2>Mes compétences</h2>
-  <div class="cols">
-    <svg viewBox="0 0 200 200" role="img" aria-label="Radar de compétences" style="max-width:380px;width:100%;margin:auto">
-      <g fill="none" stroke="var(--bd)"><polygon points="100,20 169.3,60 169.3,140 100,180 30.7,140 30.7,60"/><polygon points="100,60 134.6,80 134.6,120 100,140 65.4,120 65.4,80"/><path d="M100 20V180M30.7 60L169.3 140M169.3 60L30.7 140"/></g>
-      <polygon points="100,28 152,70 141.6,124 100,168 44.6,132 48,70" fill="var(--ac)" fill-opacity=".25" stroke="var(--ac)" stroke-width="1.5"/>
-      <text x="100" y="13" text-anchor="middle">Python</text><text x="178" y="58">Java</text><text x="176" y="148">C / Bash</text>
-      <text x="100" y="195" text-anchor="middle">HTML / CSS</text><text x="2" y="148">IA / ML</text><text x="0" y="58">Vision</text>
-    </svg>
-    <div class="sk" id="sk"></div>
-  </div>
-</div></section>
-
-<section id="contact"><div class="wrap">
-  <p class="tag">// contact</p>
-  <h2>On reste en contact ?</h2>
-  <p>Que ce soit pour discuter d’un projet, d’une opportunité ou simplement échanger, n’hésite pas à me contacter !</p>
-  <div class="ct">
-    <a class="card" href="mailto:genesyx_fr@proton.me"><b>Email</b><small>genesyx_fr@proton.me</small></a>
-    <a class="card" href="https://github.com/genesyx" target="_blank" rel="noopener"><b>GitHub</b><small>github.com/genesyx</small></a>
-    <a class="card" href="https://linkedin.com/in/genesyx" target="_blank" rel="noopener"><b>LinkedIn</b><small>linkedin.com/in/genesyx</small></a>
-  </div>
-  <a class="btn p" href="mailto:genesyx_fr@proton.me">Envoyer un message</a>
-</div></section>
-<footer>© 2026 GENEZZ – Merci d’avoir découvert mon univers !</footer>
-
-<script>
-  // Compétences
-  const skills=[["Python",90],["Java",75],["HTML / CSS",85],["SQL",70],["IA / ML",80],["Vision par ordinateur",75]];
-  document.getElementById('sk').innerHTML=skills.map(s=>`<div>${s[0]}<span>${s[1]}%</span><div class="bar"><i style="width:${s[1]}%"></i></div></div>`).join('');
-  // Thème
-  const root=document.documentElement;
-  document.getElementById('theme').onclick=()=>{const d=getComputedStyle(root).getPropertyValue('--bg').trim()==='#0d0b1a';root.dataset.theme=d?'light':'dark'};
-  // Trajectoires
-  document.getElementById('sw').onchange=e=>document.getElementById('traj').style.display=e.target.checked?'':'none';
-  // Terminal
-  const out=document.getElementById('out'),cmd=document.getElementById('cmd'),term=document.getElementById('term');
-  const R={
-    help:"Commandes disponibles :\n  help     – Affiche cette aide\n  skills   – Mes compétences\n  projects – Voir mes projets\n  github   – Mon profil GitHub\n  clear    – Effacer le terminal",
-    skills:"Python · Java · HTML/CSS · SQL · IA/ML · Vision par ordinateur",
-    projects:"Projets :\n  01. Computer Vision (YOLO + ByteTrack)\n  02. Deep Learning (TensorFlow / PyTorch)\n  03. Web (DIY – Team Vitality)\n  04. Simulation (Algorithmes & IA)",
-    github:"→ github.com/genesyx"
-  };
-  function run(c){
-    c=c.trim().toLowerCase();if(!c)return;
-    if(c==='clear'){out.textContent='';return}
-    out.textContent+=`genezz@portfolio:~$ ${c}\n`+(R[c]||`commande introuvable : ${c} (tape « help »)`)+"\n";
-    term.scrollTop=term.scrollHeight;
-  }
-  cmd.addEventListener('keydown',e=>{if(e.key==='Enter'){run(cmd.value);cmd.value=''}});
-  document.querySelectorAll('.cmds button').forEach(b=>b.onclick=()=>run(b.dataset.c));
-  // Webcam (placeholder)
-  document.getElementById('camBtn').onclick=()=>{document.getElementById('camStatus').textContent='● Démo à brancher (MediaPipe Hands)'};
-  document.getElementById('cv').onclick=e=>e.preventDefault(); // remplace par href="cv.pdf"
-</script>
 </body>
 </html>

@@ -6,31 +6,47 @@
   <title>GENEZZ – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="accueil.css">
 </head>
 <body>
 
-<nav><div class="wrap">
+<header>
   <a class="logo" href="#accueil">GENEZZ</a>
-  <a class="l" href="#accueil">Accueil</a><a class="l" href="#projets">Projets</a><a class="l" href="#competences">Compétences</a><a class="l" href="#contact">Contact</a>
-  <button class="btn ib" id="theme" aria-label="Changer de thème">◐</button>
-  <a class="btn cv" href="#" id="cv">CV</a>
-</div></nav>
 
-<section id="accueil"><div class="wrap hero">
-  <div>
-    <p class="tag">// portfolio / dev pack étudiant</p>
-    <h1>Étudiant en informatique, passionné par l’<span class="ac">IA &amp; la vision par ordinateur.</span></h1>
-    <p>Je développe des projets mêlant intelligence artificielle, vision par ordinateur et développement web. Ce portfolio vous permet d’explorer quelques-unes de mes réalisations et de découvrir mon univers.</p>
-    <div class="btns"><a class="btn p" href="#projets">Voir mes projets</a><a class="btn" href="#contact">Me contacter</a></div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#projets">Projets</a>
+    <a href="#competences">Compétences</a>
+    <a href="#apropos">A propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-droite">
+    <button class="btn-theme" aria-label="Changer de thème">◐</button>
+    <a class="btn-cv" href="cv.pdf">CV</a>
   </div>
-  <!-- Remplace ce bloc par : <img src="images/avatar.png" alt="Avatar GENEZZ"> -->
-  <div class="ph">[ ton illustration / avatar ici ]<br>images/avatar.png</div>
-</div></section>
+</header>
+
+
+<section id="accueil" class="hero">
+  <div class="container">
+
+    <div class="hero-texte">
+      <p class="tag">// portfolio / dev pack étudiant</p>
+      <h1>Étudiant en informatique, passionné par l'<span class="accent">IA &amp; la vision par ordinateur</span>.</h1>
+      <p>Je développe des projets mêlant intelligence artificielle, vision par ordinateur et développement web. Ce portfolio vous permet d’explorer quelques-unes de mes réalisations et de découvrir mon univers.</p>
+      <div class="hero-boutons">
+        <a class="btn primary" href="#projets">Voir mes projets -></a>
+        <a class="btn contactBtn" href="#contact">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Partie droite : l'image -->
+    <div class="hero-image">
+      <img src="images/avatar.png" alt="Avatar GENEZZ">
+    </div>
 
   </div>
 </section>
-
 
 
 </body>

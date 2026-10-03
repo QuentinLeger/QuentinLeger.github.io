@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #14142b;
@@ -71,6 +71,11 @@ p {
 }
 
 
+
+button {
+    font-family: inherit;   /* les <button> n'héritent pas la police tout seuls */
+}
+
 .btn {
     display: flex;
     padding: 10px 20px;
@@ -80,6 +85,7 @@ p {
     color: #14142b;
     font-size: 14px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .btn.primary {
@@ -96,7 +102,7 @@ header {
     display: flex;
     align-items: center;
     height: 80px;
-    padding: 0 24px;
+    padding: 0 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e7e5f3;
 }
@@ -104,6 +110,7 @@ header {
 .logo {
     flex: 1;
     font-weight: bold;
+    font-size: 26px;
     letter-spacing: 1px;
 }
 
@@ -139,7 +146,7 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: flex-end;   /* pousse à droite */
-    gap: 10px;
+    gap: 50px;
 }
 
 
@@ -161,12 +168,12 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
+    height: 40px;
     padding: 0 35px;
     line-height: 1;
     background-color: #000000;
     color: #ffffff;
-    border-radius: 1000px;
+    border-radius: 17px;
     font-size: 16px;
 }
 
@@ -211,9 +218,7 @@ header nav a.active {
     gap : 15px;
 }
 
-.hero-boutons .btn {
-    margin-right: 12px;
-}
+
 
 
 
@@ -223,6 +228,7 @@ header nav a.active {
     letter-spacing: 1px;
     max-width: 900px;
     margin-bottom: 24px;
+
 }
 
 .hero p {
@@ -230,6 +236,7 @@ header nav a.active {
     line-height: 1.5;
     letter-spacing: 0.3px;
     max-width: 570px;
+    font-weight: 500;
 }
 
 
@@ -262,3 +269,47 @@ header nav a.active {
     border-width: 2px;
     font-size: 22px;
 }
+
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top : 70px;
+}
+
+.hero-icones {
+    display: flex;
+    gap: 45px;
+}
+
+.hero-icones a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    transition: transform 0.15s;
+}
+
+.hero-icones a:hover {
+    transform : scale(1.2);
+}
+
+.separateur {
+    width : 2px;
+    height : 50px;
+    background-color : #c9c6dd;
+}
+
+
+.en-savoir-plus {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color : #3a3a4f;
+    font-weight: 700;
+}
+
+.en-savoir-plus:hover {
+    color : #6341fe;
+}
+
+
